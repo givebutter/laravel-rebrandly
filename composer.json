@@ -1,0 +1,10 @@
+{
+    "name": "givebutter/rebrandly",
+    "authors": [
+        {
+            "name": "Almog Cohen",
+            "email": "me@almogcohen.com"
+        }
+    ],
+    "require": {}
+}
