@@ -1,10 +1,38 @@
 {
-    "name": "givebutter/rebrandly",
+    "name": "givebutter/laravel-rebrandly",
+    "description": "Wrapper around rebrandly API",
+    "homepage": "https://github.com/givebutter/laravel-rebrandly",
+    "keywords": [
+        "laravel",
+        "rebrandly"
+    ],
+    "license": "MIT",
     "authors": [
         {
             "name": "Almog Cohen",
             "email": "me@almogcohen.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^7.2.5",
+        "laravel/framework": "^6.0|^7.0",
+        "guzzlehttp/guzzle": "^6.0|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Givebutter\\LaravelRebrandly\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Givebutter\\LaravelRebrandly\\RebrandlyServiceProvider"
+            ],
+            "aliases": {
+                "Rebrandly": "Givebutter\\LaravelRebrandly\\RebrandlyFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

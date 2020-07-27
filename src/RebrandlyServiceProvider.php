@@ -10,14 +10,13 @@ class RebrandlyServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/rebrandly.php' => config_path('rebrandly.php'),
-    ]   );
+        ]);
     }
     
-
     public function register()
     {
-        $this->app->bind('rebrandly', function ($app) {
+        /*$this->app->bind('rebrandly', function ($app) {
             return new Rebrandly;
-        });
+        });*/
     }
 }

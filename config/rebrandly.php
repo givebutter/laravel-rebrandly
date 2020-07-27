@@ -16,6 +16,6 @@ return [
     |--------------------------------------------------------------------------
     */
     
-    'default_domain' => 'rebrand.ly',
+    'default_domain' => env('REBRANDLY_DOMAIN', 'rebrand.ly'),
 	
 ];
