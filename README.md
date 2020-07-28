@@ -31,6 +31,7 @@ Rebrandly::links()->create(['destination' => 'https://google.com'])
 >Note: Provided below are examples from Rebrandly docs, all link parameters are passed in. Reference [Rebrandly API docs](https://developers.rebrandly.com/docs/) for more detailed information.
 
 &nbsp;
+&nbsp;
 ***Create*** - `Rebrandly::links()->create([ key => value ])` 
 
 | Key | Description | Constraints |
@@ -42,6 +43,7 @@ Rebrandly::links()->create(['destination' => 'https://google.com'])
 | `"domain" => ["fullName" => "example.net"], `  | A reference to the branded domain resource for this branded short link. `fullName` specifies domain short link. Uses default if not specified. | Optional |
 
 &nbsp;
+&nbsp;
 ***Update*** - `Rebrandly::links()->update(id, [ key => value ])`
 | Key | Description | Constraints |
 |--|--|--|
@@ -50,11 +52,13 @@ Rebrandly::links()->create(['destination' => 'https://google.com'])
 | `"description"`  | A title you assign to the branded short link in order to remember what's behind it. | Optional |
 
 &nbsp;
+&nbsp;
 ***Delete*** - `Rebrandly::links()->delete(option)`
  Option | Description | Constraints |
 |--|--|--|
 | `id`  | Delete specific short link id | Required |
 
+&nbsp;
 &nbsp;
 ***Get*** - `Rebrandly::links()->get(option)`
 | Option | Description | Constraints |
