@@ -15,8 +15,8 @@ class RebrandlyServiceProvider extends ServiceProvider
     
     public function register()
     {
-        /*$this->app->bind('rebrandly', function ($app) {
+        $this->app->bind('rebrandly', function ($app) {
             return new Rebrandly;
-        });*/
+        });
     }
 }
