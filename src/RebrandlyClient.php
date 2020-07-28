@@ -4,7 +4,7 @@ namespace Givebutter\LaravelRebrandly;
 
 class RebrandlyClient
 {
-    public function post($slug, $data)
+    public function post($slug, $data = [])
     {
         try {
             $client = new \GuzzleHttp\Client();

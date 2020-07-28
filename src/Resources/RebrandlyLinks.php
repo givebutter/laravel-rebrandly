@@ -25,6 +25,28 @@ class RebrandlyLinks extends RebrandlyResource
         return $this->client->get('links/'.$id);
     }
     
+    public function list($options = null)
+    {
+        $options = http_build_query($options ?? []);
+        return $this->client->get('links?'.$options);
+    }
+    
+    public function count($options = null)
+    {   
+        $options = http_build_query($options ?? []);
+        return $this->client->get('links/count?'.$options);
+    }
+    
+    public function attachTag($lid, $tid)
+    {
+        return $this->client->post('links/'.$lid.'/tags/'.$tid);
+    }
+    
+    public function detachTag($lid, $tid)
+    {
+        return $this->client->delete('links/'.$lid.'/tags/'.$tid);
+    }
+    
     public function delete($id)
     {
         return $this->client->delete('links/'.$id);
