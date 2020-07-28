@@ -50,7 +50,10 @@ Rebrandly::links()->create(['destination' => 'https://google.com'])
 | `"description"`  | A title you assign to the branded short link in order to remember what's behind it. | Optional |
 
   
-***Delete*** - `Rebrandly::links()->delete(id)`
+***Delete*** - `Rebrandly::links()->delete(option)`
+ Option | Description | Constraints |
+|--|--|--|
+| `id`  | Delete specific short link id | required |
 
   
 ***Get*** - `Rebrandly::links()->get(option)`
