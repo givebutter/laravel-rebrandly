@@ -1,6 +1,6 @@
 <?php 
 
-namespace Givebutter\LaravelRebrandly;
+namespace Givebutter\LaravelRebrandly\Resources;
 
 class RebrandlyLinks extends RebrandlyResource
 {
@@ -13,13 +13,6 @@ class RebrandlyLinks extends RebrandlyResource
         $options = array_merge($defaultOptions, $options);
         
         return $this->client->post('links', $options);
-        
-        /*$data = [
-            'destination' => 'https://www.almogcohen.com',
-            'domain'      => ['fullName' => config('rebrandly.default_domain')],
-            'title'       => 'test2',
-            'slashtag'    => 'api',        ];
-        return self::postRequest($data);*/
     }
     
     public function update($id, $options)

@@ -2,6 +2,8 @@
 
 namespace Givebutter\LaravelRebrandly;
 
+use Givebutter\LaravelRebrandly\Resources\RebrandlyLinks;
+
 class Rebrandly
 {
     public function links()

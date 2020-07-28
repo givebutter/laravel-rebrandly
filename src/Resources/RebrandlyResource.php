@@ -1,6 +1,8 @@
 <?php
 
-namespace Givebutter\LaravelRebrandly;
+namespace Givebutter\LaravelRebrandly\Resources;
+
+use Givebutter\LaravelRebrandly\RebrandlyClient;
 
 abstract class RebrandlyResource
 {
