@@ -1,9 +1,13 @@
-# Laravel Rebrandly
+
+#Laravel Rebrandly
 Laravel Rebrandly is a package around the rebrandly API using Laravel's facade system, and allows your app to quickly create, update, or delete custom shortlinks.
 
 ## Installation
 To get started, install the `givebutter/laravel-rebrandly` package:
-``composer require givebutter/laravel-rebrandly``
+
+```
+composer require givebutter/laravel-rebrandly
+```
 
 ## Usage
 
@@ -13,7 +17,7 @@ By default, the package will generate short links based on rebrandly's default d
 
 Next, add the `Rebrandly` facade to the top of your file.
 
-```
+```php
 use Rebrandly;
 
 // ...
@@ -24,9 +28,10 @@ Rebrandly::links()->create(['destination' => 'https://google.com'])
 
 ### Links
 
->Note: Provided below are examples from Rebrandly docs, all link parameters are passed in. Reference Rebrandly API docs for more details information
+>Note: Provided below are examples from Rebrandly docs, all link parameters are passed in. Reference [Rebrandly API docs](https://developers.rebrandly.com/docs/) for more detailed information.
 
-***Create*** - `Rebrandly::links()->create([ key => value ])`
+***Create*** - `Rebrandly::links()->create([ key => value ])` 
+
 | Key | Description | Constraints |
 |--|--|--|
 | `"destination"`  | The destination URL you want your branded short link to point to | Required |
@@ -35,3 +40,17 @@ Rebrandly::links()->create(['destination' => 'https://google.com'])
 | `"description"`  | A title you assign to the branded short link in order to remember what's behind it. | Optional |
 | `"domain" => ["fullName" => "example.net"], `  | A reference to the branded domain resource for this branded short link. `fullName` specifies domain short link. Uses default if not specified. | Optional |
 
+***Update*** - `Rebrandly::links()->update(id, [ key => value ])`
+| Key | Description | Constraints |
+|--|--|--|
+| `"destination"`  | The destination URL you want your branded short link to point to | Required |
+| `"title"`  | A title you assign to the branded short link in order to remember what's behind it. | Required |
+| `"description"`  | A title you assign to the branded short link in order to remember what's behind it. | Optional |
+
+***Delete*** - `Rebrandly::links()->delete(id)`
+
+***Get*** - `Rebrandly::links()->get(option)`
+| Option | Description | Constraints |
+|--|--|--|
+| `id`  | Get specific short link object (in JSON) | Optional |
+| `null`  | Get all short link objects (in JSON) | Optional |
