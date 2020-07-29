@@ -25,10 +25,9 @@ class RebrandlyTags extends RebrandlyResource
         return $this->client->get('tags?'.$options);
     }
     
-    public function count($options = null)
+    public function count()
     {   
-        $options = http_build_query($options ?? []);
-        return $this->client->get('tags/count?'.$options);
+        return $this->client->get('tags/count');
     }
     
     public function delete($id)
