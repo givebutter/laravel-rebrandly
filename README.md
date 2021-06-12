@@ -3,6 +3,8 @@
 
 Laravel Rebrandly is a package around the rebrandly API using Laravel's facade system, and allows your app to quickly create, update, or delete custom shortlinks.
 
+> ⚠️ Warning: This is a pre-release version that is not yet ready for production use.
+
 ## Installation
 To get started, install the `givebutter/laravel-rebrandly` package:
 
